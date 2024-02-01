@@ -102,14 +102,9 @@ const plugins = [
     resolve: `medusa-plugin-sendgrid`,
     options: {
       api_key: process.env.SENDGRID_API_KEY,
-      from: process.env.SENDGRID_FROM || "orders@example.com",
-      order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID,
-      localization: {
-        "de-DE": {
-          // locale key
-          order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID_LOCALIZED,
-        },
-      },
+      from: process.env.SENDGRID_FROM || "mziyadc@gmail.com",
+      order_placed_template: "d-cb65e5108bb44acb9236620f15f7e903",
+      order_shipment_created_template: "d-b1f4713ca33b4166adf70353d62b9c58",
     },
   },
 ];
