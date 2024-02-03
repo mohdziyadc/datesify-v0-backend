@@ -38,12 +38,13 @@ const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
-    resolve: `medusa-file-cloudinary`,
+    resolve: `medusa-file-s3`,
     options: {
-      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-      api_key: process.env.CLOUDINARY_API_KEY,
-      api_secret: process.env.CLOUDINARY_API_SECRET,
-      secure: true,
+      s3_url: process.env.S3_BUCKET_URL,
+      bucket: process.env.S3_BUCKET_NAME,
+      region: process.env.S3_BUCKET_REGION,
+      access_key_id: process.env.S3_ACCESS_KEY,
+      secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
     },
   },
   {
